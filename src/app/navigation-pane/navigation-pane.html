@@ -1,0 +1,22 @@
+<mat-sidenav-container class="example-container" fullscreen> 
+    <mat-sidenav mode="side" opened>
+        Sidenav content
+        <mat-nav-list>
+            <mat-list-item>
+                <h4 matLine routerLink="/home"
+                [routerLinkActiveOptions]="{exact:true}"
+                routerLinkActive="active-link">Home</h4>
+            </mat-list-item>
+            <mat-list-item>
+                <h4 matLine routerLink="/profile" routerLinkActive="active-link">Profile</h4>
+            </mat-list-item>
+            <mat-list-item>
+                <h4 matLine routerLink="/hobbies" routerLinkActive="active-link">Hobbies</h4>
+            </mat-list-item>
+        </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        Main content
+        <router-outlet></router-outlet>
+    </mat-sidenav-content>
+</mat-sidenav-container>
