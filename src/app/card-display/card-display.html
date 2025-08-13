@@ -1,0 +1,13 @@
+<mat-card class="card-display" appearance="outlined" >
+  <mat-card-header>
+    <mat-card-title>{{ title() }}</mat-card-title>
+    <mat-card-subtitle>{{ subTitle() }}</mat-card-subtitle>
+    <div mat-card-avatar class="card-header-image"></div>
+  </mat-card-header>
+  <img mat-card-image src="{{ imageUrl() }}" alt="{{ title() }}">
+  <mat-card-content>
+    <p>
+        {{ content() }}
+    </p>
+  </mat-card-content>
+</mat-card>
