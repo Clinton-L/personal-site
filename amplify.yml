@@ -10,9 +10,9 @@ frontend:
         - echo Build started on `date`
         - npx ng build
   artifacts:
-    baseDirectory: dist
+    baseDirectory: dist/personal-site/browser
     files:
-      - "**/*"
+      - '**/*'
   cache:
     paths:
       - .npm/**/*
