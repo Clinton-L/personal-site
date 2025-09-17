@@ -5,11 +5,10 @@ frontend:
       commands:
         - npm ci
         - npm install -g @angular/cli
-        - npm ng version
     build:
       commands:
         - echo Build started on `date`
-        - npm ng build
+        - npm build
   artifacts:
     baseDirectory: dist/personal-site/browser
     files:
