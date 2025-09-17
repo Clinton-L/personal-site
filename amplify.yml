@@ -3,7 +3,7 @@ frontend:
   phases:
     pre_build:
       commands:
-        - npm ci
+        - npm install
         - npm install -g @angular/cli
     build:
       commands:
