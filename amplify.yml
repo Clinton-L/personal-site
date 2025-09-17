@@ -1,0 +1,28 @@
+version: 1
+frontend:
+  phases:
+    install:
+      commands:
+        - echo update npm...
+        - npm update -g npm
+        - echo node -v
+        - node -v
+        - echo npm -v
+        - npm -v
+        - echo angular
+        - npm install -g @angular/cli
+    pre_build:
+      commands:
+        - echo Installing source NPM dependencies...
+        - npm install
+    build:
+      commands:
+        - echo Build started on `date`
+        - ng build
+  artifacts:
+    baseDirectory: dist
+    files:
+      - "**/*"
+  cache:
+    paths:
+      - .npm/**/*
