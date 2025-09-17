@@ -4,11 +4,11 @@ frontend:
     pre_build:
       commands:
         - npm ci --cache .npm --prefer-offline
+        - npm install -g @angular/cli
         - npx ng version
     build:
       commands:
         - echo Build started on `date`
-        - npm install -g @angular/cli
         - ng build
   artifacts:
     baseDirectory: dist/personal-site/browser
