@@ -1,13 +1,9 @@
 version: 1
-backend:
-  phases:
-    build:
-      commands:
-        - npm ci --cache .npm --prefer-offline
 frontend:
   phases:
     pre_build:
       commands:
+        - npm ci --cache .npm --prefer-offline
         - npx ng version
     build:
       commands:
