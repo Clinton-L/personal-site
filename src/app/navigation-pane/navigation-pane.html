@@ -3,7 +3,7 @@
         <button mat-icon-button (click)="snav.toggle()" aria-label="Menu icon">
             <img src="assets/images/monogram-small.png" alt="Monogram" class="monogram" />
         </button>
-        <div class="social-links-horizontal">
+        <div class="social-links-horizontal" [style.marginLeft]="isMobile() ? 'auto' : '16px'">
             @for (link of socialLinks; track link) {
                 <a [href]="link.url" target="_blank" rel="noopener">
                     <fa-icon class="fa-xl social-link" [icon]="link.icon"></fa-icon>
@@ -12,7 +12,7 @@
         </div>
     </mat-toolbar>
     <mat-sidenav-container autosize> 
-        <mat-sidenav #snav [mode]="isMobile() ? 'over' : 'side'" opened>
+        <mat-sidenav #snav [mode]="isMobile() ? 'over' : 'side'" closed>
             <mat-nav-list>
                 <mat-list-item>
                     <h4 matLine routerLink="/home"
