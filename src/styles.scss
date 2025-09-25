@@ -183,6 +183,7 @@ mat-drawer {
   height: 20px !important;
   width: 32px !important;
   padding-bottom: 4px;
+  gap: 8px;
 }
 
 .avatar {
@@ -221,11 +222,4 @@ mat-drawer {
 a:link {
   color: rgba(61, 181, 107, 0.619) !important;
   font-weight: bold !important;
-}
-
-.social-links-vertical {
-  display: flex;
-  flex-direction: column;
-  margin-top: 72px; /* Adjust for toolbar height */
-  gap: 16px;
 }
